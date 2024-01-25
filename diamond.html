@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RC Diamond - Top Up Mobile Legends</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+	<header>
+		<h1>RC Diamond</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Top Up</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h2>Top Up Mobile Legends</h2>
+		<p>Top Up cepat aman dan terpecaya hanya di RC Diamond</p>
+		<img src="ml.png" alt=""><br>
+		<textarea id="myTextBox" placeholder="Masukan Id"></textarea><br>
+		<button class="payment-button" onclick="selectNominal(256)">256 - Diamond</button>
+		<button class="payment-button" onclick="selectNominal(500)">500 - Diamond</button>
+		<button class="payment-button" onclick="selectNominal(770)">770 - Diamond</button>
+		<button class="payment-button" onclick="selectNominal(1240)">1240 - Diamond</button><br><br>
+
+		<button class="text-button" onclick="displayText('Qris')">Qris</button>
+  		<button class="text-button" onclick="displayText('Dana')">Dana</button>
+ 	 	<button class="text-button" onclick="displayText('GoPay')">GoPay</button>
+		<button class="text-button" onclick="displayText('Ovo')">Ovo</button>
+
+	  
+		<!-- Tempat untuk menampilkan nominal yang dipilih -->
+		<p>Nominal yang dipilih: <span id="selectedNominal">-</p>
+		<p id="displayedText">Pembayaran Melalui: -</p>
+		<a href="diamon.html"><button>Top Up Now</button></a>
+		<script>
+			// Fungsi untuk menangani pemilihan nominal
+			function selectNominal(nominal) {
+			  // Lakukan apa pun yang perlu dilakukan dengan nominal yang dipilih
+			  // Misalnya, tampilkan nominal yang dipilih pada elemen dengan id "selectedNominal"
+			  document.getElementById("selectedNominal").innerHTML = nominal.toLocaleString() + " Diamond";
+			  
+			  // Tambahan: Anda juga dapat menambahkan logika atau tindakan lain di sini
+			}
+		  </script>
+		  <script>
+			// Fungsi untuk menampilkan teks yang dipilih pada paragraf
+			function displayText(selectedText) {
+			  // Tampilkan teks yang dipilih pada paragraf dengan id "displayedText"
+			  document.getElementById("displayedText").innerHTML = "Pembayaran Melalui: " + selectedText;
+			}
+		  </script>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 RC Diamond</p>
+	</footer>
+</body>
+</html>
